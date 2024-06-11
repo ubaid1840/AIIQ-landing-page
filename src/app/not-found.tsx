@@ -3,9 +3,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Error Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Error Page for Startup Nextjs Template",
-  // other metadata
+  title: "Error Page",
+  description: "This is Error Page for AIIQ",
 };
 
 export default function NotFound () {
@@ -150,7 +149,7 @@ export default function NotFound () {
                 </p>
                 <Link
                   href="/"
-                  className="px-8 py-3 text-base font-bold text-white duration-300 rounded-md bg-primary shadow-signUp hover:bg-white hover:text-primary md:px-9 lg:px-8 xl:px-9"
+                  className="px-8 py-3 text-base font-bold text-white duration-300 rounded-md bg-primary shadow-signUp  md:px-9 lg:px-8 xl:px-9"
                 >
                   Back to Homepage
                 </Link>
