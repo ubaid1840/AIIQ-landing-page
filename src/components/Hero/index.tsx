@@ -72,7 +72,7 @@ const Hero = () => {
                 </Text>
 
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Explore how our advanced tools empower you to lead in today's fast-paced technological landscape. Seamlessly integrate cutting-edge solutions and experience unmatched performance and reliability. Stay ahead with innovation at your fingertips.
+                  {`Explore how our advanced tools empower you to lead in today's fast-paced technological landscape. Seamlessly integrate cutting-edge solutions and experience unmatched performance and reliability. Stay ahead with innovation at your fingertips.`}
                 </p>
                 <Box textAlign={{ base: "center", md: "left" }}>
                   <Link
