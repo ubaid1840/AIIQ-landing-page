@@ -2,9 +2,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { SectionWrapper } from "../HigherOrderComponents";
-import { motion } from 'framer-motion'
-import { textVariant } from "@/app/utils/motion";
 
 const Hero = () => {
 
@@ -57,40 +54,35 @@ const Hero = () => {
               <Box padding={{
                 base: '20px', md: '0px'
               }} width={{ base: "100%", md: "50%" }} marginBottom={{ base: "3", md: "0" }}>
-                <motion.div variants={textVariant()}>
-                  <Text pb={0} mb={0} color="white" fontSize="30px" fontWeight="bold">
-                    Introducing
-                  </Text>
-                </motion.div>
-                <motion.div variants={textVariant(0.5)}>
-                  <Text
-                    mt="-10px"
-                    color="white"
-                    fontSize={{ base: "50px", md: "80px" }}
-                    fontWeight="bold"
-                    opacity={fade ? 1 : 0}
-                    transition="opacity 0.5s ease-in-out"
-                    bgGradient="linear(to-r, #E2C5FF, #0099AA)"
-                    bgClip="text"
+
+                <Text pb={0} mb={0} color="white" fontSize="30px" fontWeight="bold">
+                  Introducing
+                </Text>
+                <Text
+                  mt="-10px"
+                  color="white"
+                  fontSize={{ base: "50px", md: "80px" }}
+                  fontWeight="bold"
+                  opacity={fade ? 1 : 0}
+                  transition="opacity 0.5s ease-in-out"
+                  bgGradient="linear(to-r, #E2C5FF, #0099AA)"
+                  bgClip="text"
+                >
+                  {currentText}
+                </Text>
+
+                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                  Explore how our advanced tools empower you to lead in today's fast-paced technological landscape. Seamlessly integrate cutting-edge solutions and experience unmatched performance and reliability. Stay ahead with innovation at your fingertips.
+                </p>
+                <Box textAlign={{ base: "center", md: "left" }}>
+                  <Link
+                    href="/contact"
+                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out"
                   >
-                    {currentText}
-                  </Text>
-                </motion.div>
-                <motion.div variants={textVariant(1)}>
-                  <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                    Explore how our advanced tools empower you to lead in today's fast-paced technological landscape. Seamlessly integrate cutting-edge solutions and experience unmatched performance and reliability. Stay ahead with innovation at your fingertips.
-                  </p>
-                </motion.div>
-                <motion.div variants={textVariant(1.5)}>
-                  <Box textAlign={{ base: "center", md: "left" }}>
-                    <Link
-                      href="/contact"
-                      className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out"
-                    >
-                      Connect with Us
-                    </Link>
-                  </Box>
-                </motion.div>
+                    Connect with Us
+                  </Link>
+                </Box>
+
               </Box>
             </Box>
           </Box>

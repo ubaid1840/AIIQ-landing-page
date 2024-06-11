@@ -37,30 +37,16 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {data.map((item, index) => (
             <div className="embla__slide" key={index} style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-              {/* <div className="embla__slide__number">{index + 1}</div> */}
               <Image maxWidth={'50%'} src={item.image}/>
             </div>
           ))}
         </div>
       </div>
-
       <div className="embla__controls">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
-
-        {/* <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
-          ))}
-        </div> */}
       </div>
     </section>
   )

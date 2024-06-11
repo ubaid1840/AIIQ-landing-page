@@ -53,7 +53,6 @@ const TimelineCard = ({ data, animate }: TimelineCardProps,) => {
           <div>
             <h3 className="text-white text-[24px] font-bold">{data.title}</h3>
           </div>
-
           <ul className="mt-5 list-disc ml-5 space-y-2">
             {data.points.map((point, index) => (
               <li
@@ -72,7 +71,7 @@ const TimelineCard = ({ data, animate }: TimelineCardProps,) => {
 
 const Timeline = () => {
 
-  
+
 
   const [animationVisible, setAnimationVisible] = useState(false);
 
@@ -81,7 +80,7 @@ const Timeline = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setAnimationVisible(true);
-        } 
+        }
       });
     }, {
       threshold: 0.5
