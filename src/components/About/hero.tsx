@@ -16,6 +16,12 @@ const Hero = () => {
       alignItems={'center'}
       justifyContent={'center'}
       display={'flex'}
+      textAlign={'center'}
+      padding={{
+        base: '20px', md: '0px'
+      }}
+       bgSize="cover"
+      bgPosition="center"
     >
       <Text
         mt="-10px"
@@ -23,8 +29,8 @@ const Hero = () => {
         fontSize={{ base: "30px", md: "50px" }}
         fontWeight="bold"
         transition="opacity 0.5s ease-in-out"
-        bgGradient="linear(to-r, #E2C5FF, #0099AA)"
-        bgClip="text"
+        // bgGradient="linear(to-r, #E2C5FF, #0099AA)"
+        // bgClip="text"
         lineHeight={'normal'}
       >
         Changing Today, Influencing Tomorrow.

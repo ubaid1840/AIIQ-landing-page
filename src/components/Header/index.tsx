@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import menuData from "./menuData";
+import { Image } from "@chakra-ui/react";
 
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -58,8 +58,7 @@ const Header = () => {
                 <Image
                  src="/images/logo/logo-aiiq.png"
                   alt="logo"
-                  width={100}
-                  height={30}
+                  width={{base : 50, md : 100}}
                   className="hidden w-100px dark:block"
                 />
               </Link>
