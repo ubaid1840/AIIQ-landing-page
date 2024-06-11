@@ -2,6 +2,8 @@
 import { Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
+import { textVariant } from "@/app/utils/motion";
 
 const Hero = () => {
 
@@ -20,22 +22,23 @@ const Hero = () => {
       padding={{
         base: '20px', md: '0px'
       }}
-       bgSize="cover"
+      bgSize="cover"
       bgPosition="center"
     >
-      <Text
-        mt="-10px"
-        color="white"
-        fontSize={{ base: "30px", md: "50px" }}
-        fontWeight="bold"
-        transition="opacity 0.5s ease-in-out"
-        // bgGradient="linear(to-r, #E2C5FF, #0099AA)"
-        // bgClip="text"
-        lineHeight={'normal'}
-      >
-        Changing Today, Influencing Tomorrow.
-      </Text>
-
+      <motion.div variants={textVariant()}>
+        <Text
+          mt="-10px"
+          color="white"
+          fontSize={{ base: "30px", md: "50px" }}
+          fontWeight="bold"
+          transition="opacity 0.5s ease-in-out"
+          bgGradient="linear(to-r, #E2C5FF, #0099AA)"
+          bgClip="text"
+          lineHeight={'normal'}
+        >
+          Changing Today, Influencing Tomorrow.
+        </Text>
+      </motion.div>
     </Box>
 
   );

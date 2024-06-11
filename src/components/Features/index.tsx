@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant, } from "@/app/utils/motion";
 import { SectionWrapper } from "../HigherOrderComponents";
+import { Box } from "@chakra-ui/react";
 
 
 type ServiceCardProps = {
@@ -42,25 +43,36 @@ const ServiceCard = ({ index, title, icon, paragraph }: ServiceCardProps) => {
 
 const Features = () => {
 	return (
-		<>
-			<section id="features" className="py-10 md:py-10 lg:py-10">
 
-				<div className="container">
-					<motion.div variants={textVariant()}>
-						<SectionTitle
-							title="Main Features"
-							paragraph="Our AI Tools Are Designed To Cater To Your Specific Business Needs."
-							center
-						/>
-					</motion.div>
-					<div className="mt-20 flex flex-wrap gap-20" style={{ justifyContent: 'center' }}>
-						{featuresData.map((service, index) => (
-							<ServiceCard key={service.title} index={index} title={service.title} icon={service.icon} paragraph={service.paragraph} />
-						))}
-					</div>
+
+		<Box
+			paddingY={'0px'}
+			as="section"
+			id="features"
+			bgImg={'/images/herobg.webp'}
+			paddingX={{
+				base: '20px', md: '0px'
+			}}
+			bgSize={'cover'}
+			bgPosition="center"
+		>
+			<div className="container" style={{paddingTop:'80px', paddingBottom:'80px'}}>
+				<motion.div variants={textVariant()}>
+					<SectionTitle
+						title="Main Features"
+						paragraph="Our AI Tools Are Designed To Cater To Your Specific Business Needs."
+						center
+					/>
+				</motion.div>
+				<div className="mt-20 flex flex-wrap gap-20" style={{ justifyContent: 'center' }}>
+					{featuresData.map((service, index) => (
+						<ServiceCard key={service.title} index={index} title={service.title} icon={service.icon} paragraph={service.paragraph} />
+					))}
 				</div>
-			</section>
-		</>
+			</div>
+		</Box>
+
+
 	);
 };
 
